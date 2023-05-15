@@ -9,8 +9,17 @@ You should probably be familiar with the following techniques/concepts if you wa
 - instrumental variable (IV) analysis (here is a GREAT [book chapter](https://theeffectbook.net/ch-InstrumentalVariables.html) here is a [tutorial](https://rpsychologist.com/adherence-analysis-IV-brms) that actually also does IV in SEM.
 - shrinkage estimatators/penalties ([general intro](https://www.datasklr.com/extensions-of-ols-regression/regularization-and-shrinkage-ridge-lasso-and-elastic-net-regression), and a [tutorial](https://www.mdpi.com/2624-8611/3/4/38) as applied in SEM).
 
+## cautionary notes
+
 All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudonal, growth, devleopmental, measurement, and within person/EMA models.
 
+In the emperical application of all three models a huge burden falls on the reseacher to get the assumptions and constraints that are imposed right. Read the original work, evaluate the assumptions, where possible let prior theory inform you on constraints and do not default to letting the algorithm choose the constraints for you. Be sceptical of the models you evaluate. Getting the nuanced constraints you will need to impose on the data wrong is far easier then getting them right.
+
+Some vital concern with these models, especially when applied to cross sectional data deserve highlighting:
+
+**Cyclic causal effect** where A causes B and B causes A, are hard to intepreted. If there is an effect A -> B, and then later in time B -> A, we may pick up both in cross sectional data with these models, though if we measured before B -> A then we wont pick it up. We will be unsure of when the effects played otu, whethery they were a pulse (one time only effect) or a constant static effect. The timescale at which effects play out isnt resovlved easily either, and so to make further inferences on the timescale across whiche ffects play out, reseachers would still require repeated measures data and would need to adapt these models of use iin tht context. 
+
+**Unmodeled features** unmodeled measurent issues like scale ceiling & floor effects or aquescence; and unmodeled samplign issues like selective particiaption or dropout, **WILL** influence the data, if left unmodelled these may bias causal parameter estimates or model comparison. There are no shortcuts nor is there certainty you did get a handle on them. What you can do is faithfully and rigorously model know issues to the best of your ability. 
 
 ## Technique 1: Adaptive lasso instrumental variable SEM.
 
