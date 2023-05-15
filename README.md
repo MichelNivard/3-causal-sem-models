@@ -56,7 +56,7 @@ In psychological sicence its unlikely that groups are identically confounded or 
 
 essential references and reading:
 
-**Rigobon, R.** (2003). Identification through heteroskedasticity. Review of Economics and Statistics, 85(4), 777-792.
+**Original method:** Rigobon, R. (2003). Identification through heteroskedasticity. Review of Economics and Statistics, 85(4), 777-792.
 
 
 **Package we used:**
