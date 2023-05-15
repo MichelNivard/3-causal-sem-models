@@ -21,7 +21,7 @@ In this technique we leverage insturmental variables to identifiy causal paths. 
 Especially assumption 2 and 3 can be problematic in the contex of psychological reseach. However, if we have multiple instruments (perhaps even many!) we can use adaptive lasso shrinkage to distill a set of valid intruments from a larger set of instruments in which up to 50% can de invalid.
 
 - Here is the R script illustrating this technique
-- Here is an interactive notebook you can run chunk by cunk in google colab
+- [Here is an interactive notebook you can run](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Adaptive_Lasso_instrumental_variable_structural_equation_model.ipynb) chunk by cunk in google colab
 - Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your instruments and their expected effect this model makes sense.
 
 expanssions/challenges to the model we considered
