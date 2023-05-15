@@ -49,7 +49,7 @@ lslx: Huang, P.-H. (2020). lslx: Semi-confirmatory structural equation modeling 
 This technique arose from the econometric literature and leverages naturally occuring groups (school years, states, neighborhoods, etc) where peopel are exected to differ in their exogeneous influences, but remain identical in their fundemental (structural) model, cponfoudners and measurement error.
 
 - Here is the R script illustrating this technique
-- Here is an interactive notebook you can run chunk by chunk in google colab
+- [Here is an interactive notebook](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Identification_of_causal_effects_through_heteroskedasticity_in_a_multi_group_SEM.ipynb) you can run chunk by chunk in google colab
 - Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your group structure to evaluate whether the model suits you.
 
 
