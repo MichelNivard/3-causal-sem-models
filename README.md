@@ -21,8 +21,12 @@ In this technique we leverage insturmental variables to identifiy causal paths. 
 Especially assumption 2 and 3 can be problematic in the contex of psychological reseach. However, if we have multiple instruments (perhaps even many!) we can use adaptive lasso shrinkage to distill a set of valid intruments from a larger set of instruments in which up to 50% can de invalid.
 
 - Here is the R script illustrating this technique
-- Here is an interactive notebook you can run chunk by cunk in google colabl
+- Here is an interactive notebook you can run chunk by cunk in google colab
 - Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your instruments and their expected effect this model makes sense.
+
+expanssions/challenges to the model we considered
+
+- A script for the model in the presense of confounders or measurement error.
 
 essential references and reading:
 
@@ -35,8 +39,17 @@ Jacobucci, R., Grimm, K. J., & McArdle, J. J. (2016). Regularized Structural Equ
 **Package we used:**
 Orzek J (2023). lessSEM: Non-Smooth Regularization for Structural Equation Models. R package version 1.4, https://github.com/jhorzek/lessSEM.
 
-**Other pachages:**
+**Other R packages that could fit the bill:**
+lavaan Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling. Journal of Statistical Software, 48(2), 1-36. https://doi.org/10.18637/jss.v048.i02
+regsem: Jacobucci, R. (2017). regsem: Regularized Structural Equation Modeling. ArXiv:1703.08489 [Stat]. https://arxiv.org/abs/1703.08489
+lslx: Huang, P.-H. (2020). lslx: Semi-confirmatory structural equation modeling via penalized likelihood. Journal of Statistical Software, 93(7). https://doi.org/10.18637/jss.v093.i07
 
+## Technique 2: Identification through heterokedasticity in a multi-group SEM
 
-## Technique 2: Idnetification trough heterokedasticity implemented in a multi-group SEM
+This technique straces back to the econometric literature and leverages naturally identified groups (school years, states, neighborhoods, etc) where peopel are exected to differ in their exogeneous influences, but remain identical in their fundemental (structural) model, cponfoudners and measurement error.
+
+- Here is the R script illustrating this technique
+- Here is an interactive notebook you can run chunk by chunk in google colab
+- Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your group structure to evaluate whether the model suits you.
+
 
