@@ -4,9 +4,10 @@ This repo describes three structural equation models (SEM) in which, based on cr
 
 You should probably be falmiliar witht he following techniques/concepts if you want to feel competent and confident applying these models to emperical data, but do not let that hold you back from browsing this repo and trying the interactive notebooks.
 
-- structural equation modeling, or SEM (here is a youtube course, here an online book to refresh or learn)
-- instrumental variable analysis (here is a tutorial, here is a longer piece).
-- shrinkage estimatators/penalties (applied in SEM)
+- structural equation modeling, or SEM (here is a youtube course, here an online book to refresh or learn) 
+- Lavaan as its the SEM software on which most models in this repo are (loosly) based.
+- instrumental variable (IV) analysis (here is a tutorial, here is a longer piece).
+- shrinkage estimatators/penalties (general intro, and as applied in SEM)
 
 
 ## Technique 1: Adaptive lasso instrumental variable SEM.
@@ -30,3 +31,12 @@ Windmeijer, F., Farbmacher, H., Davies, N., & Davey Smith, G. (2019). On the use
 
 **Adative Lasso in SEM:**
 Jacobucci, R., Grimm, K. J., & McArdle, J. J. (2016). Regularized Structural Equation Modeling. Structural Equation Modeling: A Multidisciplinary Journal, 23(4), 555–566. https://doi.org/10.1080/10705511.2016.1154793
+
+**Package we used:**
+Orzek J (2023). lessSEM: Non-Smooth Regularization for Structural Equation Models. R package version 1.4, https://github.com/jhorzek/lessSEM.
+
+**Other pachages:**
+
+
+## Technique 2: Idnetification trough heterokedasticity implemented in a multi-group SEM
+
