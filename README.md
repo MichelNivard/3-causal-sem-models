@@ -21,7 +21,7 @@ In this technique we leverage insturmental variables to identifiy causal paths. 
 Especially assumption 2 and 3 can be problematic in the contex of psychological reseach. However, if we have multiple instruments (perhaps even many!) we can use adaptive lasso shrinkage to distill a set of valid intruments from a larger set of instruments in which up to 50% can de invalid.
 
 - Here is the R script illustrating this technique
-- [Here is an interactive notebook you can run](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Adaptive_Lasso_instrumental_variable_structural_equation_model.ipynb) chunk by cunk in google colab
+- [Here is an interactive notebook you can run](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Adaptive_Lasso_instrumental_variable_structural_equation_model.ipynb) chunk by chunk in google colab
 - Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your instruments and their expected effect this model makes sense.
 
 expanssions/challenges to the model we considered
@@ -46,10 +46,19 @@ lslx: Huang, P.-H. (2020). lslx: Semi-confirmatory structural equation modeling 
 
 ## Technique 2: Identification through heterokedasticity in a multi-group SEM
 
-This technique straces back to the econometric literature and leverages naturally identified groups (school years, states, neighborhoods, etc) where peopel are exected to differ in their exogeneous influences, but remain identical in their fundemental (structural) model, cponfoudners and measurement error.
+This technique arose from the econometric literature and leverages naturally occuring groups (school years, states, neighborhoods, etc) where peopel are exected to differ in their exogeneous influences, but remain identical in their fundemental (structural) model, cponfoudners and measurement error.
 
 - Here is the R script illustrating this technique
 - Here is an interactive notebook you can run chunk by chunk in google colab
 - Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your group structure to evaluate whether the model suits you.
+
+
+In psychological sicence its unlikely that groups are identically confounded or have identical measurement error therefore we developed a cross betwene this modle and the adaptive lasso introduced in the first model which alows for (penalized/shrunken) between group differences in the variance attributable to a confounder.confounders and betwene group differences in mesasurement error.
+
+- Here is the R script illustrating this expansons of the technique
+- Here is an interactive notebook you can run chunk by chunk in google colab of the exanded technique.
+
+
+
 
 
