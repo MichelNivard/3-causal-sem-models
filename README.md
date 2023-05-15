@@ -65,7 +65,21 @@ essential references and reading:
 lavaan Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling. Journal of Statistical Software, 48(2), 1-36. https://doi.org/10.18637/jss.v048.i02
 
 
+## Technique 3: multi comoment SEM (MCMSEM)
 
+In previous work we have linked causal inference based on higher order moments (which itself is based on a long reseach tradition, for references see below) and a causal SEM model. In the current pre-print we introduce a straightforward mutlivariate extension.
+
+- Here is the R script illustrating this technique
+- [Here is an interactive notebook]() you can run chunk by chunk in google colab
+- Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with     your group structure to evaluate whether the model suits you.
+
+In psychological sciences measurement base don scales means that the moments of the measured data quite possibly refects scale as much as it relfects the moments of the underlying constructs. We sugest where necessary first applying an (IRT) measurement model that retain the moments of the undferlying trait could offer a solution.
+
+essential references and reading:
+
+**Original method:** Tamimy, Z., van Bergen, E., van der Zee, M. D., Dolan, C. V., & Nivard, M. G. (2022). Multi Co-Moment Structural Equation Models: Discovering Direction of Causality in the Presence of Confounding.
+
+**Software we used:** currently you can experimetn with the development version of MCMSEM, it requires torch and is under active development https://github.com/zenabtamimy/MCMSEM/tree/dev-torch a specific issue with the use of torch is that results change form CPU to CPU or from GPU to GPU, however the speedup on GPU can be dramatic. 
 
 
 
