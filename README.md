@@ -46,17 +46,22 @@ lslx: Huang, P.-H. (2020). lslx: Semi-confirmatory structural equation modeling 
 
 ## Technique 2: Identification through heterokedasticity in a multi-group SEM
 
-This technique arose from the econometric literature and leverages naturally occuring groups (school years, states, neighborhoods, etc) where peopel are exected to differ in their exogeneous influences, but remain identical in their fundemental (structural) model, cponfoudners and measurement error.
+This technique arose from the econometric literature (Rigobon 2022) and leverages naturally occuring groups (school years, states, neighborhoods, etc) where groups are expected to differ in their exogeneous influences, but assumed identical in their fundemental (structural) model, confoudners and measurement error.
 
 - Here is the R script illustrating this technique
 - [Here is an interactive notebook](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Identification_of_causal_effects_through_heteroskedasticity_in_a_multi_group_SEM.ipynb) you can run chunk by chunk in google colab
 - Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your group structure to evaluate whether the model suits you.
 
+In psychological sicence its unlikely that groups are identically confounded or have identical measurement error therefore we also discuss ways in which specific errors, confounders and network parameters can be freed betwen groups. An obvious further development would be to combine the first two techniques and use Adaptive Lasso to shrink violations of equalities betwene groups to arrive at a model that is identified yet allows hetrogeneity betwene groups.
 
-In psychological sicence its unlikely that groups are identically confounded or have identical measurement error therefore we developed a cross betwene this modle and the adaptive lasso introduced in the first model which alows for (penalized/shrunken) between group differences in the variance attributable to a confounder.confounders and betwene group differences in mesasurement error.
+essential references and reading:
 
-- Here is the R script illustrating this expansons of the technique
-- Here is an interactive notebook you can run chunk by chunk in google colab of the exanded technique.
+**Rigobon, R.** (2003). Identification through heteroskedasticity. Review of Economics and Statistics, 85(4), 777-792.
+
+
+**Package we used:**
+lavaan Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling. Journal of Statistical Software, 48(2), 1-36. https://doi.org/10.18637/jss.v048.i02
+
 
 
 
