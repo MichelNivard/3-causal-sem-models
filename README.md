@@ -1,13 +1,15 @@
-# 3-causal-sem-models
+# Three causal sem models
 
-This repo describes three structural equation models (SEM) in which, based on cross sectional data, **(cyclical) networks** and **latent variable** models are identified. Because the models can, if assumptions are met, deal with endogeneity (i.e. the fact that frequntly most or  all variables in psychological models are potentially exposure and outcome and cannot easily be experimentally issolated) they are especially **well suited for causal inference in psychological sciences.**
+This repo describes three structural equation models (SEM) in which, based on cross sectional data, **(cyclical) networks** and **latent variable** models are identified. Because the models can, if assumptions are met, deal with endogeneity (i.e. the fact that frequntly most or  all variables in psychological models are potentially both exposure and outcome and cannot easily be experimentally issolated) they are especially **well suited for causal inference in psychological sciences.**
 
-You should probably be falmiliar witht he following techniques/concepts if you want to feel competent and confident applying these models to emperical data, but do not let that hold you back from browsing this repo and trying the interactive notebooks.
+You should probably be familiar with the following techniques/concepts if you want to feel competent and confident applying these models to emperical data, but do not let that hold you back from browsing this repo and trying the interactive notebooks.
 
 - structural equation modeling, or SEM (here is a [youtube](https://www.youtube.com/watch?v=fGdsiugwO0k&list=PLliBbGBc5nn3m8bXQ4CmOep3UmQ_5tVlC) course, here are [SEM basics in R](https://bookdown.org/njenk001/discovering_structural_equation_modeling_using_stata/) based on asn oldder book to refresh or learn) 
 - Lavaan as its the SEM software on which most models in this repo are (loosly) based, here is an online [book chapter](https://bookdown.org/jdholster1/idsr/structural-equation-modeling.html) here a [list of tutorials and materials](https://lavaan.ugent.be/resources/teaching.html).
 - instrumental variable (IV) analysis (here is a GREAT [book chapter](https://theeffectbook.net/ch-InstrumentalVariables.html) here is a [tutorial](https://rpsychologist.com/adherence-analysis-IV-brms) that actually also does IV in SEM.
 - shrinkage estimatators/penalties ([general intro](https://www.datasklr.com/extensions-of-ols-regression/regularization-and-shrinkage-ridge-lasso-and-elastic-net-regression), and a [tutorial](https://www.mdpi.com/2624-8611/3/4/38) as applied in SEM).
+
+All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudonal, growth, devleopmental, measurement, and within person/EMA models.
 
 
 ## Technique 1: Adaptive lasso instrumental variable SEM.
