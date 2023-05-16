@@ -22,8 +22,8 @@ If you want to feel competent and confident applying these models to emperical d
 In this technique we leverage insturmental variables to identifiy causal paths. instrumental variables are exogeneous variables (often sudden unanticipated shocks) that influence one of the endogeneous psychological variables you are interested in, and can teen be used to ID causal effects your variable of interest has on other variables even if there are confounders or measurement error provided 3 assumptions hold:
 
 1.  The insturmental variable (IV) causes the exposure variable
-2.  The IV isnt correlated with any confounders
-3.  The IV doesnt cause the outcome *other than trough the exposure*
+2.  The IV isnt correlated with any confounder of the relatino betwene exposure and outcome
+3.  The IV doesnt cause the outcome *other than through the exposure*
 
 Especially assumption 2 and 3 can be problematic in the contex of psychological reseach. However, if we have multiple instruments (perhaps even many!) we can use adaptive lasso shrinkage to distill a set of valid intruments from a larger set of instruments in which up to 50% can de invalid.
 
