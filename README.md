@@ -17,18 +17,6 @@ You should probably be familiar with the following techniques/concepts if you wa
 2. Interactive notebooks and clean R scripts implementing each of the causal structural equation models. the notebooks have a button to open them in google colab (free) where you could run them chunk by chunk whih looks like this: <img style="text-align: center;" width="139" alt="image" src="https://github.com/MichelNivard/3-causal-sem-models/assets/11858442/a806df6d-a771-4255-bf52-c65aa0674675">
 3. For those we don't like notebooks are are unfamilair we also have clean scripts in which the model is run once on simulated data.
 
-## cautionary notes
-
-All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudonal, growth, devleopmental, measurement, and within person/EMA models.
-
-In the emperical application of all three models a huge burden falls on the reseacher to get the assumptions and constraints that are imposed right. Read the original work, evaluate the assumptions, where possible let prior theory inform you on constraints and do not default to letting the algorithm choose the constraints for you. Be sceptical of the models you evaluate. Getting the nuanced constraints you will need to impose on the data wrong is far easier then getting them right.
-
-Some vital concern with these models, especially when applied to cross sectional data deserve highlighting:
-
-**Cyclic causal effect** where A causes B and B causes A, are hard to intepreted. If there is an effect A -> B, and then later in time B -> A, we may pick up both in cross sectional data with these models, though if we measured before B -> A then we wont pick it up. We will be unsure of when the effects played otu, whethery they were a pulse (one time only effect) or a constant static effect. The timescale at which effects play out isnt resovlved easily either, and so to make further inferences on the timescale across whiche ffects play out, reseachers would still require repeated measures data and would need to adapt these models of use iin tht context. 
-
-**Unmodeled features** unmodeled measurent issues like scale ceiling & floor effects or aquescence; and unmodeled samplign issues like selective particiaption or dropout, **WILL** influence the data, if left unmodelled these may bias causal parameter estimates or model comparison. There are no shortcuts nor is there certainty you did get a handle on them. What you can do is faithfully and rigorously model know issues to the best of your ability. 
-
 ## Technique 1: Adaptive lasso instrumental variable SEM.
 
 In this technique we leverage insturmental variables to identifiy causal paths. instrumental variables are exogeneous variables (often sudden unanticipated shocks) that influence one of the endogeneous psychological variables you are interested in, and can teen be used to ID causal effects your variable of interest has on other variables even if there are confounders or measurement error provided 3 assumptions hold:
@@ -98,5 +86,15 @@ essential references and reading:
 
 **Software we used:** currently you can experimetn with the development version of MCMSEM, it requires torch and is under active development https://github.com/zenabtamimy/MCMSEM/tree/dev-torch a specific issue with the use of torch is that results change form CPU to CPU or from GPU to GPU, however the speedup on GPU can be dramatic. 
 
+## cautionary notes
 
+All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudonal, growth, devleopmental, measurement, and within person/EMA models.
+
+In the emperical application of all three models a huge burden falls on the reseacher to get the assumptions and constraints that are imposed right. Read the original work, evaluate the assumptions, where possible let prior theory inform you on constraints and do not default to letting the algorithm choose the constraints for you. Be sceptical of the models you evaluate. Getting the nuanced constraints you will need to impose on the data wrong is far easier then getting them right.
+
+Some vital concern with these models, especially when applied to cross sectional data deserve highlighting:
+
+**Cyclic causal effect** where A causes B and B causes A, are hard to intepreted. If there is an effect A -> B, and then later in time B -> A, we may pick up both in cross sectional data with these models, though if we measured before B -> A then we wont pick it up. We will be unsure of when the effects played otu, whethery they were a pulse (one time only effect) or a constant static effect. The timescale at which effects play out isnt resovlved easily either, and so to make further inferences on the timescale across whiche ffects play out, reseachers would still require repeated measures data and would need to adapt these models of use iin tht context. 
+
+**Unmodeled features** unmodeled measurent issues like scale ceiling & floor effects or aquescence; and unmodeled samplign issues like selective particiaption or dropout, **WILL** influence the data, if left unmodelled these may bias causal parameter estimates or model comparison. There are no shortcuts nor is there certainty you did get a handle on them. What you can do is faithfully and rigorously model know issues to the best of your ability. 
 
