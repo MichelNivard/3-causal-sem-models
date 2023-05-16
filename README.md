@@ -9,6 +9,11 @@ You should probably be familiar with the following techniques/concepts if you wa
 - instrumental variable (IV) analysis (here is a GREAT [book chapter](https://theeffectbook.net/ch-InstrumentalVariables.html) here is a [tutorial](https://rpsychologist.com/adherence-analysis-IV-brms) that actually also does IV in SEM.
 - shrinkage estimatators/penalties ([general intro](https://www.datasklr.com/extensions-of-ols-regression/regularization-and-shrinkage-ridge-lasso-and-elastic-net-regression), and a [tutorial](https://www.mdpi.com/2624-8611/3/4/38) as applied in SEM).
 
+## What this repo offers
+
+1. Code to reproduce the analyses in our preprint
+2. Interactive notebooks and clean R scripts implementing each of the causal SEM.
+
 ## cautionary notes
 
 All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudonal, growth, devleopmental, measurement, and within person/EMA models.
