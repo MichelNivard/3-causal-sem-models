@@ -4,7 +4,7 @@ This repo describes three structural equation models (SEM) in which, based on cr
 
 These modeles are all fairly power hungry so we simulate and explor analyses with anywhere from 5000 to 100.000 simulted observations. These coud be 5000 individuals, or potentially be 14 days of 5 daily brief experience samplign quastionnaires for 500 people for a total of 5*14*500 = 35.000 observations. While the models conceptually extend to longitudinal or even EMA data those extensions aren't outlined here but are fairly obvious (though potentially complex, challenging and tedious to implement).
 
-If you want to feel competent and confident applying these models to emperical data,yYou should probably be familiar with the following techniques/concepts, but do not let that hold you back from browsing this repo, trying the interactive notebooks and learning new concepts.
+If you want to feel competent and confident applying these models to emperical data, you should probably be familiar with the following techniques/concepts, but do not let that hold you back from browsing this repo, trying the interactive notebooks and learning new concepts.
 
 - structural equation modeling, or SEM (here is a [youtube](https://www.youtube.com/watch?v=fGdsiugwO0k&list=PLliBbGBc5nn3m8bXQ4CmOep3UmQ_5tVlC) course, here are [SEM basics in R](https://bookdown.org/njenk001/discovering_structural_equation_modeling_using_stata/) based on asn oldder book to refresh or learn) 
 - Lavaan as its the SEM software on which most models in this repo are (loosly) based, here is an online [book chapter](https://bookdown.org/jdholster1/idsr/structural-equation-modeling.html) here a [list of tutorials and materials](https://lavaan.ugent.be/resources/teaching.html).
