@@ -1,6 +1,8 @@
 # Three causal SEM models
 
-This repo describes three structural equation models (SEM) in which, based on cross sectional data, **(cyclical) networks** and **latent variable** models are identified. Because the models can, if assumptions are met, deal with endogeneity (i.e. the fact that frequntly most or  all variables in psychological models are potentially both exposure and outcome and cannot easily be experimentally issolated) they are especially **well suited for causal inference in psychological sciences.**
+This repo describes three structural equation models (SEM) in which, based on cross sectional data, **(cyclical) networks** and **latent variable** models are identified. Each model imposes a set of additional constraints on the data to identify these causal processes. Because the models can, if assumptions are met, deal with endogeneity (i.e. the fact that frequntly most or  all variables in psychological models are potentially both exposure and outcome and cannot easily be experimentally issolated) they are especially **well suited for causal inference in psychological sciences.**
+
+These modeles are all fairly power hungry so we simulate and explor analyses with anywhere from 5000 to 100.000 simulted observations. These coud be 5000 individuals, or potentially be 14 days of 5 daily brief experience samplign quastionnaires for 500 people for a total of 5*14*500 = 35.000 observations. while the models conceptually extend to longitudonal or even EMA data those extensions arent outlined here.
 
 You should probably be familiar with the following techniques/concepts if you want to feel competent and confident applying these models to emperical data, but do not let that hold you back from browsing this repo and trying the interactive notebooks.
 
@@ -12,7 +14,7 @@ You should probably be familiar with the following techniques/concepts if you wa
 ## What this repo offers
 
 1. Code to reproduce the analyses in our preprint
-2. Interactive notebooks and clean R scripts implementing each of the causal SEM.
+2. Interactive notebooks and clean R scripts implementing each of the causal structural equation models.
 
 ## cautionary notes
 
