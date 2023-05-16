@@ -2,8 +2,6 @@
 
 This repo describes three structural equation models (SEM) in which, based on cross sectional data, **(cyclical) networks** and **latent variable** models are identified. Each model imposes a set of additional constraints on the data to identify these causal processes. Because the models can, if assumptions are met, deal with endogeneity (i.e. the fact that frequntly most or  all variables in psychological models are potentially both exposure and outcome and cannot easily be experimentally issolated) they are especially **well suited for causal inference in psychological sciences.**
 
-These models are all fairly power hungry so we simulate and explore analyses with anywhere from 5000 to 80.000 simulated observations. These coud be 5000 individuals, or potentially be 14 days of 5 daily brief experience sampling measures for 500 people for a total of 5*14*500 = 35.000 observations. Where it should be nioted any extensions longitudinal or even EMA data aren't currently outlined in this repo but are fairly obvious (though potentially complex, challenging and tedious to implement).
-
 If you want to feel competent and confident applying these models to emperical data, you should probably be familiar with the following techniques/concepts, but do not let that hold you back from browsing this repo, trying the interactive notebooks and learning new concepts.
 
 - structural equation modeling, or SEM (here is a [youtube](https://www.youtube.com/watch?v=fGdsiugwO0k&list=PLliBbGBc5nn3m8bXQ4CmOep3UmQ_5tVlC) course, here are [SEM basics in R](https://bookdown.org/njenk001/discovering_structural_equation_modeling_using_stata/) based on asn oldder book to refresh or learn) 
@@ -88,7 +86,9 @@ essential references and reading:
 
 ## cautionary notes
 
-All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudonal, growth, devleopmental, measurement, and within person/EMA models.
+All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudinal, growth, developmental, measurement, and within person/EMA models.
+
+These models are all fairly power hungry so we simulate and explore analyses with anywhere from 5000 to 80.000 simulated observations. These coud be 5000 individuals, or potentially be 14 days of 5 daily brief experience sampling measures for 500 people for a total of 5*14*500 = 35.000 observations. Where it should be nioted any extensions longitudinal or even EMA data aren't currently outlined in this repo but are fairly obvious (though potentially complex, challenging and tedious to implement).
 
 In the emperical application of all three models a huge burden falls on the reseacher to get the assumptions and constraints that are imposed right. Read the original work, evaluate the assumptions, where possible let prior theory inform you on constraints and do not default to letting the algorithm choose the constraints for you. Be sceptical of the models you evaluate. Getting the nuanced constraints you will need to impose on the data wrong is far easier then getting them right.
 
