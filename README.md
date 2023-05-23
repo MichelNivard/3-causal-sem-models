@@ -2,12 +2,14 @@
 
 This repo describes three structural equation models (SEM) in which, based on cross sectional data, **(cyclical) networks** and **latent variable** models are identified. Each model imposes a set of additional constraints on the data to identify these causal processes. Because the models can, if assumptions are met, deal with endogeneity (i.e. the fact that frequntly most or  all variables in psychological models are potentially both exposure and outcome and cannot easily be experimentally issolated) they are especially **well suited for causal inference in psychological sciences.** Not all models are devleoped by us, do no cite our work as the original source unless you are describing a specific SEM implementation we developed or atributes we added to a model that are novel, rather cite the original source or ideally both.
 
-If you want to feel competent and confident applying these models to emperical data, you should probably be familiar with the following techniques/concepts, but do not let that hold you back from browsing this repo, trying the interactive notebooks and learning new concepts.
+## Prerequisites
 
-- structural equation modeling, or SEM (here is a [youtube](https://www.youtube.com/watch?v=fGdsiugwO0k&list=PLliBbGBc5nn3m8bXQ4CmOep3UmQ_5tVlC) course, here are [SEM basics in R](https://bookdown.org/njenk001/discovering_structural_equation_modeling_using_stata/) based on asn oldder book to refresh or learn) 
+If you want to feel competent and confident applying these models to empirical data, you should probably be familiar with the following techniques/concepts, but do not let that hold you back from browsing this repo, trying the interactive notebooks and learning new concepts.
+
+- structural equation modeling, or SEM (here is a [youtube](https://www.youtube.com/watch?v=fGdsiugwO0k&list=PLliBbGBc5nn3m8bXQ4CmOep3UmQ_5tVlC) course I can recommend.
 - Lavaan as its the SEM software on which most models in this repo are (loosly) based, here is an online [book chapter](https://bookdown.org/jdholster1/idsr/structural-equation-modeling.html) here a [list of tutorials and materials](https://lavaan.ugent.be/resources/teaching.html).
-- instrumental variable (IV) analysis, Nobels have been won, ink has been spilled, lots of ways to get up to speed on this. Here is a GREAT [book chapter](https://theeffectbook.net/ch-InstrumentalVariables.html) here is a [tutorial](https://rpsychologist.com/adherence-analysis-IV-brms) that actually also does IV in SEM.
-- shrinkage estimatators/penalties ([general intro](https://www.datasklr.com/extensions-of-ols-regression/regularization-and-shrinkage-ridge-lasso-and-elastic-net-regression), and a [tutorial](https://www.mdpi.com/2624-8611/3/4/38) as applied in SEM).
+- instrumental variable (IV) analysis, here is a GREAT [book chapter](https://theeffectbook.net/ch-InstrumentalVariables.html) here is a [tutorial](https://rpsychologist.com/adherence-analysis-IV-brms) that actually also does IV in SEM and in a Baysian regression.
+- shrinkage estimatators/penalties here is a [general intro](https://www.datasklr.com/extensions-of-ols-regression/regularization-and-shrinkage-ridge-lasso-and-elastic-net-regression), and here is a [tutorial](https://www.mdpi.com/2624-8611/3/4/38) of shrinkage as applied in SEM.
 
 ## What this repo offers
 
@@ -44,14 +46,14 @@ Jacobucci, R., Grimm, K. J., & McArdle, J. J. (2016). Regularized Structural Equ
 **Package we used:**
 Orzek J (2023). lessSEM: Non-Smooth Regularization for Structural Equation Models. R package version 1.4, https://github.com/jhorzek/lessSEM.
 
-**Other R packages that could fit the bill:**
-lavaan Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling. Journal of Statistical Software, 48(2), 1-36. https://doi.org/10.18637/jss.v048.i02
+**Other R packages that are relevant or suitable:**
+lavaan: Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling. Journal of Statistical Software, 48(2), 1-36. https://doi.org/10.18637/jss.v048.i02
 regsem: Jacobucci, R. (2017). regsem: Regularized Structural Equation Modeling. ArXiv:1703.08489 [Stat]. https://arxiv.org/abs/1703.08489
 lslx: Huang, P.-H. (2020). lslx: Semi-confirmatory structural equation modeling via penalized likelihood. Journal of Statistical Software, 93(7). https://doi.org/10.18637/jss.v093.i07
 
 ## Technique 2: Identification through heterokedasticity in a multi-group SEM
 
-This technique arose from the econometric literature (Rigobon 2022) and leverages naturally occuring groups (school years, states, neighborhoods, etc) where groups are expected to differ in their exogeneous influences, but assumed identical in their fundemental (structural) model, confoudners and measurement error.
+This technique arose from the econometric literature (Rigobon 2022) and leverages naturally occuring groups (school years, states, neighborhoods, etc) where groups are expected to differ in their exogeneous influences, but assumed identical in their fundemental (structural) model, confounders and measurement error.
 
 - Here is the R script illustrating this technique
 - [Here is an interactive notebook](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Identification_of_causal_effects_through_heteroskedasticity_in_a_multi_group_SEM.ipynb) you can run chunk by chunk in google colab
@@ -62,7 +64,6 @@ In psychological sicence its unlikely that groups are identically confounded or 
 essential references and reading:
 
 **Original method:** Rigobon, R. (2003). Identification through heteroskedasticity. Review of Economics and Statistics, 85(4), 777-792.
-
 
 **Package we used:**
 lavaan Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling. Journal of Statistical Software, 48(2), 1-36. https://doi.org/10.18637/jss.v048.i02
@@ -84,7 +85,7 @@ essential references and reading:
 
 **Software we used:** currently you can experimetn with the development version of MCMSEM, it requires torch and is under active development https://github.com/zenabtamimy/MCMSEM/tree/dev-torch a specific issue with the use of torch is that results change form CPU to CPU or from GPU to GPU, however the speedup on GPU can be dramatic. 
 
-## cautionary notes
+## Cautionary notes
 
 All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudinal, growth, developmental, measurement, and within person/EMA models.
 
