@@ -12,7 +12,7 @@ If you want to feel competent and confident applying these models to emperical d
 ## What this repo offers
 
 1. Code to reproduce the analyses in our preprint
-2. Interactive notebooks and clean R scripts implementing each of the causal structural equation models. the notebooks have a button to open them in google colab (free) where you could run them chunk by chunk whih looks like this: <img style="text-align: center;" width="139" alt="image" src="https://github.com/MichelNivard/3-causal-sem-models/assets/11858442/a806df6d-a771-4255-bf52-c65aa0674675">
+2. Interactive notebooks and clean R scripts implementing each of the causal structural equation models. the notebooks have a button to open them in google colab (free) where you could run them chunk by chunk which looks like this: <img style="text-align: center;" width="139" alt="image" src="https://github.com/MichelNivard/3-causal-sem-models/assets/11858442/a806df6d-a771-4255-bf52-c65aa0674675">
 3. For those we don't like notebooks are are unfamilair we also have clean scripts in which the model is run once on simulated data.
 
 ## Technique 1: Adaptive lasso instrumental variable SEM.
