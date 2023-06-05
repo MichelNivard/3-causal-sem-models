@@ -6,7 +6,7 @@ This repo describes three structural equation models (SEM) in which, based on cr
 
 If you want to feel competent and confident applying these models to empirical data, you should probably be familiar with the following techniques/concepts, but do not let that hold you back from browsing this repo, trying the interactive notebooks and learning new concepts.
 
-- structural equation modeling, or SEM (here is a [youtube](https://www.youtube.com/watch?v=fGdsiugwO0k&list=PLliBbGBc5nn3m8bXQ4CmOep3UmQ_5tVlC) course I can recommend.
+- structural equation modeling, or SEM (here is a [youtube](https://www.youtube.com/watch?v=fGdsiugwO0k&list=PLliBbGBc5nn3m8bXQ4CmOep3UmQ_5tVlC) course I can recommend).
 - Lavaan as its the SEM software on which most models in this repo are (loosly) based, here is an online [book chapter](https://bookdown.org/jdholster1/idsr/structural-equation-modeling.html) here a [list of tutorials and materials](https://lavaan.ugent.be/resources/teaching.html).
 - instrumental variable (IV) analysis, here is a GREAT [book chapter](https://theeffectbook.net/ch-InstrumentalVariables.html) here is a [tutorial](https://rpsychologist.com/adherence-analysis-IV-brms) that actually also does IV in SEM and in a Baysian regression.
 - shrinkage estimatators/penalties here is a [general intro](https://www.datasklr.com/extensions-of-ols-regression/regularization-and-shrinkage-ridge-lasso-and-elastic-net-regression), and here is a [tutorial](https://www.mdpi.com/2624-8611/3/4/38) of shrinkage as applied in SEM.
