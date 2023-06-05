@@ -27,13 +27,8 @@ In this technique we leverage insturmental variables to identifiy causal paths. 
 
 Especially assumption 2 and 3 can be problematic in the contex of psychological reseach. However, if we have multiple instruments (perhaps even many!) we can use adaptive lasso shrinkage to distill a set of valid intruments from a larger set of instruments in which up to 50% can de invalid.
 
-- Here is the R script illustrating this technique
-- [Here is an interactive notebook you can run](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Adaptive_Lasso_instrumental_variable_structural_equation_model.ipynb) chunk by chunk in google colab
-- Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your instruments and their expected effect this model makes sense.
-
-expanssions/challenges to the model we considered
-
-- A script for the model in the presense of confounders or measurement error.
+- [Here is an interactive notebook you can run](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Adaptive_Lasso_instrumental_variable_structural_equation_model.ipynb) chunk by chunk in google colab. The notebook discusses the basic mdoel and some adaptations to allow for error and confounding. 
+- this github contains the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your instruments and their expected effect this model makes sense.
 
 essential references and reading:
 
@@ -53,11 +48,11 @@ lslx: Huang, P.-H. (2020). lslx: Semi-confirmatory structural equation modeling 
 
 ## Technique 2: Identification through heterokedasticity in a multi-group SEM
 
-This technique arose from the econometric literature (Rigobon 2022) and leverages naturally occuring groups (school years, states, neighborhoods, etc) where groups are expected to differ in their exogeneous influences, but assumed identical in their fundemental (structural) model, confounders and measurement error.
+This technique arose from the econometric literature (Rigobon 2002) and leverages naturally occuring groups (school years, states, neighborhoods, etc) where groups are expected to differ in their exogeneous influences, but assumed identical in their fundemental (structural) model, confounders and measurement error.
 
-- Here is the R script illustrating this technique
+
 - [Here is an interactive notebook](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Identification_of_causal_effects_through_heteroskedasticity_in_a_multi_group_SEM.ipynb) you can run chunk by chunk in google colab
-- Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your group structure to evaluate whether the model suits you.
+- This repo contains the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with your group structure to evaluate whether the model suits you.
 
 In psychological sicence its unlikely that groups are identically confounded or have identical measurement error therefore we also discuss ways in which specific errors, confounders and network parameters can be freed betwen groups. An obvious further development would be to combine the first two techniques and use Adaptive Lasso to shrink violations of equalities betwene groups to arrive at a model that is identified yet allows hetrogeneity betwene groups.
 
@@ -73,9 +68,8 @@ lavaan Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling
 
 In previous work we have linked causal inference based on higher order moments (which itself is based on a long reseach tradition, for references see below) and a causal SEM model. In the current pre-print we introduce a straightforward mutlivariate extension.
 
-- Here is the R script illustrating this technique
 - [Here is an interactive notebook](https://github.com/MichelNivard/3-causal-sem-models/blob/main/Multi_comoment_structural_equation_model_(MCMSEM).ipynb) you can run chunk by chunk in google colab
-- Here are the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with     your group structure to evaluate whether the model suits you.
+- This github contains the scripts we used in our paper for monte-carlo simulation, you can adapt these to figure otu whether at your sample size and with     your group structure to evaluate whether the model suits you.
 
 In psychological sciences measurement base don scales means that the moments of the measured data quite possibly refects scale as much as it relfects the moments of the underlying constructs. We sugest where necessary first applying an (IRT) measurement model that retain the moments of the undferlying trait could offer a solution.
 
@@ -89,7 +83,7 @@ essential references and reading:
 
 All three models come in the form of deceptively "simple" models/scripts, however their identification fully relies on imposing constraints  that need to be fully grounded in theory and should be the core focus of any scientific application of these models. As outlined in the pre-print, the models come in the form of SEM models, which means they can be integrated with longitudinal, growth, developmental, measurement, and within person/EMA models.
 
-These models are all fairly power hungry so we simulate and explore analyses with anywhere from 5000 to 80.000 simulated observations. These coud be 5000 individuals, or potentially be 14 days of 5 daily brief experience sampling measures for 500 people for a total of 5*14*500 = 35.000 observations. Where it should be nioted any extensions longitudinal or even EMA data aren't currently outlined in this repo but are fairly obvious (though potentially complex, challenging and tedious to implement).
+These models are all fairly power hungry so we simulate and explore analyses with anywhere from 5000 to 60.000 simulated observations. These coud be 5000 individuals, or potentially be 14 days of 5 daily brief experience sampling measures for 500 people for a total of 5*14*500 = 35.000 observations. Where it should be nioted any extensions longitudinal or even EMA data aren't currently outlined in this repo but are fairly obvious (though potentially complex, challenging and tedious to implement).
 
 In the emperical application of all three models a huge burden falls on the reseacher to get the assumptions and constraints that are imposed right. Read the original work, evaluate the assumptions, where possible let prior theory inform you on constraints and do not default to letting the algorithm choose the constraints for you. Be sceptical of the models you evaluate. Getting the nuanced constraints you will need to impose on the data wrong is far easier then getting them right.
 
